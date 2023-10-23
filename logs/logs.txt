@@ -1,0 +1,31 @@
+
+
+-----Error----- time:[2023-10-23 03:47:12.756861]:
+Error: the string does not belong to a finite state machine
+123
+~^
+
+-----Okay----- time:[2023-10-23 03:50:00.413726]:
+Success, input string: [22]
+
+-----Error----- time:[2023-10-23 03:52:31.756051]:
+Error: the string does not belong to a finite state machine
+123
+~^
+
+-----Error----- time:[2023-10-23 03:52:34.400954]:
+Input string not in alphabet
+
+-----Okay----- time:[2023-10-23 03:52:36.744092]:
+Success, input string: [11]
+
+-----Error----- time:[2023-10-23 03:52:39.271275]:
+Error: the string does not belong to a finite state machine
+312
+~^
+
+-----Okay----- time:[2023-10-23 03:52:40.519477]:
+Success, input string: [1]
+
+-----Error----- time:[2023-10-23 03:52:43.000745]:
+Input string not in alphabet
