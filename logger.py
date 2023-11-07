@@ -4,7 +4,7 @@ from typing import IO
 
 class Logger:
     def __init__(self, directory: str):
-        self.file: IO = open(directory, "a+")
+        self.file: IO = open(directory, "a+", encoding='utf-8')
 
     def close_logger(self) -> None:
         self.file.close()

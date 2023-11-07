@@ -9,12 +9,21 @@ class Machine:
     def check_alphabet(self, input_string: str) -> bool:
         for char in input_string:
             if char not in alphabet:
-                self.logger.error("Input string not in alphabet")
+                self.logger.error("Error: input string not in alphabet")
                 return False
+        return True
+
+    def check_empty(self, input_string: str) -> bool:
+        if input_string == '' or not input_string:
+            self.logger.error("Error: string is empty")
+            return False
         return True
 
     def check_row(self, cols: str):
         if not self.check_alphabet(cols):
+            return
+
+        if not self.check_empty(cols):
             return
 
         row: int = 0  # init row (S)
@@ -24,4 +33,7 @@ class Machine:
                 return
             row = transitions[row][int(cols[i]) - 1]
 
-        self.logger.write(f'Success, input string: [{cols}]')
+        if row == 4:
+            self.logger.write(f'OK: Success, input string: [{cols}]')
+        else:
+            self.logger.error(f"Мы не дошли до конечного состояния, input string [{cols}]")

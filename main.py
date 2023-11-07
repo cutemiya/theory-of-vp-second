@@ -6,5 +6,7 @@ if __name__ == "__main__":
 
     while string != "-1":
         string: str = input()
+        if string == '-1':
+            break
         machine.check_row(string)
         print("next")
